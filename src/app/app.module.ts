@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import {LoginComponent} from './components/login/login.component';
 import { BuscadorusersComponent } from './components/buscadorusers/buscadorusers.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { DetallesComponent } from './components/detalles/detalles.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     BuscadorusersComponent,
-    FilterPipe
+    FilterPipe,
+    DetallesComponent
   ],
   imports: [
     BrowserModule, routing, FormsModule, HttpClientModule

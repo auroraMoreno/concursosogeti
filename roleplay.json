@@ -1,4 +1,5 @@
-{"users": [
+{
+  "users": [
   {
       "identifier": "fivem:1281149",
       "identity": {
@@ -78,4 +79,22 @@
         }
       }
     }
-]}
+],
+"authenticate":[
+  {
+    "auth": true
+    , "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjA2NjUyNzMyfQ.oI4K70Eg1QnXKJhdZzPrlHRerRZsltbQnQXuiO2KyLU"
+
+  },
+  {
+    "auth": true
+    , "token":"token-api-authenticate"
+
+  },
+  {
+    "auth": false
+    , "token":""
+
+  }
+]
+}
