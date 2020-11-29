@@ -15,15 +15,4 @@ export class FilterPipe implements PipeTransform {
     return resultUser;
   }
 
-
-// transform(users:any, strBusqueda : string){
-//     if(!users) return [];
-//     if(!strBusqueda) return users;
-//     strBusqueda = strBusqueda.toLowerCase();
-//     return users.filter( user => {
-//      return user.identity.name.toLowerCase().includes(strBusqueda)  || user.identity.firstname.toLowerCase().includes(strBusqueda) ;
-//   });
-
-//   }
-
 }
