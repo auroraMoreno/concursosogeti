@@ -19,6 +19,21 @@
     </form>
     <button (click)="getUsers()">Users in consola</button>
   </div>
+
+  <h1>Buscador</h1>
+<!-- <form #usersForm="ngForm">
+    <label>Introduzca user</label>
+    <input type="text"
+    #cajaUser name="cajaUser"/>
+    <button (click)="buscarUser()">Buscar usuario</button>
+</form> -->
+<input
+type="text"
+class="forms-control"
+placeholder="Buscar.."
+[(ngModel)]="filterpost"
+name="filterpost"
+/>
   <table>
     <thead>
       <tr>
@@ -27,9 +42,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let u of users">
+      <tr *ngFor="let u of users | filter: filterpost">
         <td>{{u.identifier}}</td>
-        <td>{{u.job}}</td>
+        <td>{{u.identity.name}}</td>
       </tr>
     </tbody>
   </table>

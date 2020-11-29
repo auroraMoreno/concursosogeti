@@ -11,6 +11,7 @@ export class BuscadorusersComponent implements OnInit {
 
   public users:Array<User>;
   @ViewChild("cajaUser") cajaUser:ElementRef;
+ 
 
   constructor(private _service:UserService) { 
     this.users=[];
@@ -18,9 +19,11 @@ export class BuscadorusersComponent implements OnInit {
 
   buscarUser(){
     var name=this.cajaUser.nativeElement.value;
-    this._service.buscadorUser(name).subscribe(response=>{
-      console.log(response);
-    });
+    var locator = (u:User) => u.identity.name == name;
+    console.log(locator);
+    // this._service.buscadorUser(name).subscribe(response=>{
+    //   console.log(response);
+    // });
   }
 
   ngOnInit(): void {

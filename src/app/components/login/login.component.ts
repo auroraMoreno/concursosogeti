@@ -10,6 +10,7 @@ import {User} from './../../../models/user';
 export class LoginComponent implements OnInit {
     user: string;
     password: string;
+    filterpost = '';
 
     public users:Array<User>;
 
