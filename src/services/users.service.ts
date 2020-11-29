@@ -13,4 +13,9 @@ export class UserService{
         headers.append("user",user);
         return this.http.post("http://13.93.70.220:30120/S2VAPI/authenticate", {headers:headers});
     }
+
+    getUsers():Observable<any>{
+        var url = "http://localhost:3000/users";
+        return this.http.get(url);
+    }
 }
