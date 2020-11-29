@@ -1,11 +1,11 @@
 import {Routes,RouterModule} from '@angular/router';
 import {ModuleWithProviders} from '@angular/core';
-import {AppComponent} from './app.component';
 import {LoginComponent} from './../app/components/login/login.component';
+import { BuscadorusersComponent } from './components/buscadorusers/buscadorusers.component';
 
 const appRoutes: Routes = [
-    {path:"", component:AppComponent},
-    {path:"login", component:LoginComponent}
+    {path:"login", component:LoginComponent},
+    {path:"buscador",component:BuscadorusersComponent}
 ];
 export const appRoutingProviders : any[] = [];
 export const routing: ModuleWithProviders<any> = 

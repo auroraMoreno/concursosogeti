@@ -1,0 +1,32 @@
+<h1>Buscador</h1>
+<form #usersForm="ngForm">
+    <label>Introduzca user</label>
+    <input type="text"
+    #cajaUser name="cajaUser"/>
+    <button (click)="buscarUser()">Buscar usuario</button>
+</form>
+
+<div style="display: none;">
+    <table>
+        <thead>
+            <tr>
+                <th>Identifier</th>
+                <th>Name</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <button>ID Details</button>
+                </td>
+                <td>
+                    <button>ID Jobs</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

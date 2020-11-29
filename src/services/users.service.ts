@@ -1,11 +1,15 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
+import {Global} from './global';
 
 
 @Injectable({providedIn:'root'})
 export class UserService{
-    constructor(private http:HttpClient) {}
+    private url:string;
+    constructor(private http:HttpClient) {
+        this.url=Global.url;
+    }
 
     login(user,password):Observable<any>{
         const headers = new HttpHeaders();
@@ -15,7 +19,12 @@ export class UserService{
     }
 
     getUsers():Observable<any>{
-        var url = "http://localhost:3000/users";
-        return this.http.get(url);
+        return this.http.get(this.url);
     }
+
+    buscadorUser(identifier):Observable<any>{
+        var request = this.url + "/" + identifier;
+        return this.http.get(request);
+    }
+
 }
