@@ -10,23 +10,21 @@ import {UserService} from './../../../services/users.service';
 export class BuscadorusersComponent implements OnInit {
 
   public users:Array<User>;
-  @ViewChild("cajaUser") cajaUser:ElementRef;
- 
+  filterpost = '';
 
   constructor(private _service:UserService) { 
     this.users=[];
   }
 
-  buscarUser(){
-    var name=this.cajaUser.nativeElement.value;
-    var locator = (u:User) => u.identity.name == name;
-    console.log(locator);
-    // this._service.buscadorUser(name).subscribe(response=>{
-    //   console.log(response);
-    // });
-  }
+  getUsers(){
+    this._service.getUsers().subscribe(data=>{
+        this.users = data;
+        console.log(this.users);
+    });
+}
 
   ngOnInit(): void {
+    this.getUsers();
   }
 
 }
