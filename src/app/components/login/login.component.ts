@@ -29,21 +29,22 @@ export class LoginComponent implements OnInit {
     login(){
         console.log(this.cajaUser.nativeElement.value);
         console.log(this.cajaPassword.nativeElement.value);
-
         var user = this.cajaUser.nativeElement.value;
-        var password = this.cajaPassword.nativeElement.value;
+        var password = this.cajaPassword.nativeElement.value
+        // var user = this.cajaUser.nativeElement.value;
+        // var password = this.cajaPassword.nativeElement.value;
 
-        if(user === "S2VTournament" && password === "sogetispain"){
-            this._router.navigate(["/buscador"]);
-        }else{
-            alert("user o password incorrectos");
-        }
+        // if(user === "S2VTournament" && password === "sogetispain"){
+        //     this._router.navigate(["/buscador"]);
+        // }else{
+        //     alert("user o password incorrectos");
+        // }
 
-        // this._service.login(this.password,this.user).subscribe(data =>{
-        //     console.log(data);
-        // }, error=>{
-        //     console.log(error);
-        // });
+        this._service.login(password,user).subscribe(data =>{
+            console.log(data);
+        }, error=>{
+            console.log(error);
+        });
     }
 
 

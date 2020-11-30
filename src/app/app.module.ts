@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import {LoginComponent} from './components/login/login.component';
 import { BuscadorusersComponent } from './components/buscadorusers/buscadorusers.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from "@angular/material/dialog";
+import { DetallesComponent } from './components/detalles/detalles.component';
 
 
 @NgModule({
@@ -14,12 +17,15 @@ import { FilterPipe } from './pipes/filter.pipe';
     AppComponent,
     LoginComponent,
     BuscadorusersComponent,
-    FilterPipe
+    FilterPipe,
+    DetallesComponent
   ],
   imports: [
-    BrowserModule, routing, FormsModule, HttpClientModule
+    BrowserModule, routing, FormsModule, HttpClientModule, BrowserAnimationsModule, MatDialogModule
   ],
   providers: [appRoutingProviders],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[DetallesComponent]
+
 })
 export class AppModule { }
