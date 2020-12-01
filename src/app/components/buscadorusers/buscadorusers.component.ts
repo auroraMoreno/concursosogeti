@@ -12,6 +12,7 @@ import { DetallesComponent } from '../detalles/detalles.component';
 export class BuscadorusersComponent implements OnInit {
 
   public users:Array<User>;
+  //public user: User;
   filterpost = '';
   //public user:User;
 
@@ -25,12 +26,14 @@ export class BuscadorusersComponent implements OnInit {
     this._service.getUsers().subscribe(data=>{
         this.users = data;
         console.log(this.users);
+
+        
     });
 }
 
 openDialog(user:User){
   this.dialog.open(DetallesComponent,{
-    data: user.identity.name
+    data:user
   })
 }
 

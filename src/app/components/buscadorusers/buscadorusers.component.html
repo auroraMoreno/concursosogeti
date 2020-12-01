@@ -11,12 +11,25 @@ name="filterpost"
       <tr>
         <th>Identifier</th>
         <th>Name</th>
+        <th>First Name</th>
+        <th>Second Name</th>
+        <th>Gender</th>
+        <th>Date of birth</th>
+        <th>Height</th>
+        <th>Phone number</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let u of users | filter: filterpost">
         <td>{{u.identifier}}</td>
         <td>{{u.identity.name}}</td>
+        <td>{{u.identity.firstname}}</td>
+        <td>{{u.identity.secondname}}</td>
+        <td>{{u.identity.sex}}</td>
+        <td>{{u.identity.dateofbirth}}</td>
+        <td>{{u.identity.height}}</td>
+        <td>{{u.phone_number}}</td>
         <td><button (click)="openDialog(u)">Detalles</button></td>
       </tr>
     </tbody>

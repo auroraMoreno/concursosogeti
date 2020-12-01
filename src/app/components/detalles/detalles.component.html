@@ -1,6 +1,10 @@
-<h1 mat-dialog-title>Confirmación</h1>
+<h1 mat-dialog-title>Más info: {{user.identity.name}} {{user.identity.firstname}}</h1>
 <div mat-dialog-content>
-    <p>{{user}}</p>
+    <h3>Job: {{user.job}}</h3>
+    <h3>Job Grade: {{user.job_grade}}</h3>
+    <h3>Bank money: {{user.bank_money}}</h3>
+    <h3>Validated: {{user.validated}}</h3>
+    <h3 *ngIf="user.licenses.weapon !=null">Licenses: {{user.licenses.weapon}}</h3>
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="closeDialog()">Close</button>
