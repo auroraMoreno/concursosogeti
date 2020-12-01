@@ -40,8 +40,9 @@ export class LoginComponent implements OnInit {
         //     alert("user o password incorrectos");
         // }
 
-        this._service.login(password,user).subscribe(data =>{
-            console.log(data);
+        this._service.login(password,user).subscribe(res =>{
+            console.log(this.token=res);
+           
         }, error=>{
             console.log(error);
         });

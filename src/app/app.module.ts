@@ -10,6 +10,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
 import { DetallesComponent } from './components/detalles/detalles.component';
+import { CookieService } from "ngx-cookie-service";
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { DetallesComponent } from './components/detalles/detalles.component';
   imports: [
     BrowserModule, routing, FormsModule, HttpClientModule, BrowserAnimationsModule, MatDialogModule
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders,CookieService],
   bootstrap: [AppComponent],
   entryComponents:[DetallesComponent]
 
