@@ -17,7 +17,7 @@ name="filterpost"
       <tr *ngFor="let u of users | filter: filterpost">
         <td>{{u.identifier}}</td>
         <td>{{u.identity.name}}</td>
-        <td><button (click)="openDialog()">Detalles</button></td>
+        <td><button (click)="openDialog(u)">Detalles</button></td>
       </tr>
     </tbody>
   </table>

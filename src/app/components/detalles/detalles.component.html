@@ -1,11 +1,9 @@
-<h1>Holaaa</h1>
-    <mat-dialog-content style="display: none;">
-      <h1>Hello</h1>
-  </mat-dialog-content>
-
-<mat-dialog-actions style="display: none;">
-    <button class="mat-raised-button" >Close</button>
-    <button class="mat-raised-button mat-primary">Save</button>
-</mat-dialog-actions>
+<h1 mat-dialog-title>Confirmación</h1>
+<div mat-dialog-content>
+    <p>{{user}}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="closeDialog()">Close</button>
+</div>
 
   

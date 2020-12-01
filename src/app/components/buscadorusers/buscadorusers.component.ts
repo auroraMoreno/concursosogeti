@@ -13,6 +13,7 @@ export class BuscadorusersComponent implements OnInit {
 
   public users:Array<User>;
   filterpost = '';
+  //public user:User;
 
   constructor(private _service:UserService, private dialog:MatDialog) { 
     this.users=[];
@@ -27,16 +28,10 @@ export class BuscadorusersComponent implements OnInit {
     });
 }
 
-openDialog(){
-  const dialogConfig = new MatDialogConfig();
-  // dialogConfig.position={
-  //   'top':'10',
-  //   'left':'10'
-  // }
-  
-  dialogConfig.data= {  };
-
-  this.dialog.open(DetallesComponent,dialogConfig);
+openDialog(user:User){
+  this.dialog.open(DetallesComponent,{
+    data: user.identity.name
+  })
 }
 
   ngOnInit(): void {
